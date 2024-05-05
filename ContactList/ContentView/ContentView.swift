@@ -8,33 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    let persons = Person.getPersons()
-    
-    @State private var searchName = ""
+    @StateObject private var viewModel = ContentViewModel()
     
     var body: some View {
         TabView {
-            PersonListView(persons: searchPersons)
+            PersonListView(persons: viewModel.filteredPersons)
                 .tabItem {
                     Image(systemName: "person.2.circle")
                     Text("Contacts")
                 }
-            PersonSectionView(persons: searchPersons)
+            PersonSectionView(persons: viewModel.filteredPersons)
                 .tabItem {
                     Image(systemName: "phone")
                     Text("Numbers")
                 }
         }
         .preferredColorScheme(.dark)
-        .searchable(text: $searchName, prompt: "Search")
-    }
-    
-    private var searchPersons: [Person] {
-        if searchName.isEmpty {
-            return persons
-        } else {
-            return persons.filter { $0.fullName.contains(searchName) }
-        }
+        .searchable(text: $viewModel.searchName, prompt: "Search")
     }
 }
 
