@@ -11,14 +11,17 @@ struct PersonSectionView: View {
     let persons: [Person]
     
     var body: some View {
-        List(persons) { person in
-            Section(person.fullName) {
-                Label(person.phone, systemImage: "phone")
-                Label(person.email, systemImage: "tray")
+        NavigationStack {
+            List(persons) { person in
+                Section(person.fullName) {
+                    Label(person.phone, systemImage: "phone")
+                    Label(person.email, systemImage: "tray")
+                }
+                .textCase(.none)
             }
-            .textCase(.none)
+            .listStyle(.plain)
+            .navigationTitle("Contact List")
         }
-        .listStyle(.plain)
     }
 }
 

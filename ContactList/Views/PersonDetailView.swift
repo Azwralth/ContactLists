@@ -29,5 +29,5 @@ struct PersonDetailView: View {
 }
 
 #Preview {
-    PersonDetailView(person: Person(firstName: "Alex", lastName: "Alexov", email: "@mail.ru", phone: "123"))
+    PersonDetailView(person: Person(firstName: "Alex", lastName: "Alexov", email: "@mail.ru", phone: "123", color: .red))
 }

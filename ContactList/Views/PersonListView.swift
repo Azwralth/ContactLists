@@ -12,27 +12,21 @@ struct PersonListView: View {
     let persons: [Person]
     
     var body: some View {
-        List(persons) { person in
-            NavigationLink(destination: PersonDetailView(person: person)) {
-                ZStack {
-                    Circle()
-                        .fill(Color.random())
-                        .frame(width: 50, height: 50)
-                    Text("\(person.firstName.prefix(1))")
+        NavigationStack {
+            List(persons) { person in
+                NavigationLink(destination: PersonDetailView(person: person)) {
+                    ZStack {
+                        Circle()
+                            .fill(person.color)
+                            .frame(width: 50, height: 50)
+                        Text("\(person.firstName.prefix(1))")
+                    }
+                    Text("\(person.fullName)")
                 }
-                Text("\(person.fullName)")
             }
+            .listStyle(.plain)
+            .navigationTitle("Contact List")
         }
-        .listStyle(.plain)
-    }
-}
-
-extension Color {
-    static func random() -> Color {
-        let red = Double.random(in: 0...1)
-        let green = Double.random(in: 0...1)
-        let blue = Double.random(in: 0...1)
-        return Color(red: red, green: green, blue: blue)
     }
 }
 
