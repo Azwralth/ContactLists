@@ -14,8 +14,8 @@
 		76CA54ED2BE776BE00D1DF98 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54EC2BE776BE00D1DF98 /* DataStore.swift */; };
 		76CA54EF2BE776EB00D1DF98 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54EE2BE776EB00D1DF98 /* Person.swift */; };
 		76CA54F12BE777A400D1DF98 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F02BE777A400D1DF98 /* PersonDetailView.swift */; };
-		76CA54F32BE777C200D1DF98 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F22BE777C200D1DF98 /* Numbers.swift */; };
-		76CA54F52BE7781100D1DF98 /* PersonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F42BE7781100D1DF98 /* PersonList.swift */; };
+		76CA54F32BE777C200D1DF98 /* PersonSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F22BE777C200D1DF98 /* PersonSectionView.swift */; };
+		76CA54F52BE7781100D1DF98 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F42BE7781100D1DF98 /* PersonListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		76CA54EC2BE776BE00D1DF98 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		76CA54EE2BE776EB00D1DF98 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		76CA54F02BE777A400D1DF98 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
-		76CA54F22BE777C200D1DF98 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
-		76CA54F42BE7781100D1DF98 /* PersonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonList.swift; sourceTree = "<group>"; };
+		76CA54F22BE777C200D1DF98 /* PersonSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSectionView.swift; sourceTree = "<group>"; };
+		76CA54F42BE7781100D1DF98 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +61,13 @@
 		76CA54DD2BE776B100D1DF98 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				76CA54DE2BE776B100D1DF98 /* ContactListApp.swift */,
 				76CA54E02BE776B100D1DF98 /* ContentView.swift */,
-				76CA54F42BE7781100D1DF98 /* PersonList.swift */,
-				76CA54EC2BE776BE00D1DF98 /* DataStore.swift */,
-				76CA54EE2BE776EB00D1DF98 /* Person.swift */,
-				76CA54F02BE777A400D1DF98 /* PersonDetailView.swift */,
-				76CA54F22BE777C200D1DF98 /* Numbers.swift */,
-				76CA54E22BE776B300D1DF98 /* Assets.xcassets */,
+				76CA54FD2BE7C47300D1DF98 /* Views */,
+				76CA54FB2BE7C44C00D1DF98 /* Services */,
+				76CA54FA2BE7C43800D1DF98 /* Models */,
 				76CA54E42BE776B300D1DF98 /* Preview Content */,
+				76CA54DE2BE776B100D1DF98 /* ContactListApp.swift */,
+				76CA54E22BE776B300D1DF98 /* Assets.xcassets */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -80,6 +78,32 @@
 				76CA54E52BE776B300D1DF98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76CA54FA2BE7C43800D1DF98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76CA54EE2BE776EB00D1DF98 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76CA54FB2BE7C44C00D1DF98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				76CA54EC2BE776BE00D1DF98 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		76CA54FD2BE7C47300D1DF98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76CA54F42BE7781100D1DF98 /* PersonListView.swift */,
+				76CA54F22BE777C200D1DF98 /* PersonSectionView.swift */,
+				76CA54F02BE777A400D1DF98 /* PersonDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +178,10 @@
 			files = (
 				76CA54E12BE776B100D1DF98 /* ContentView.swift in Sources */,
 				76CA54ED2BE776BE00D1DF98 /* DataStore.swift in Sources */,
-				76CA54F52BE7781100D1DF98 /* PersonList.swift in Sources */,
+				76CA54F52BE7781100D1DF98 /* PersonListView.swift in Sources */,
 				76CA54F12BE777A400D1DF98 /* PersonDetailView.swift in Sources */,
 				76CA54EF2BE776EB00D1DF98 /* Person.swift in Sources */,
-				76CA54F32BE777C200D1DF98 /* Numbers.swift in Sources */,
+				76CA54F32BE777C200D1DF98 /* PersonSectionView.swift in Sources */,
 				76CA54DF2BE776B100D1DF98 /* ContactListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

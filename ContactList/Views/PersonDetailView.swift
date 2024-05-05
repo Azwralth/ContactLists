@@ -21,7 +21,7 @@ struct PersonDetailView: View {
             }
             VStack(alignment: .leading, spacing: 20) {
                 Label("\(person.phone)", systemImage: "phone")
-                Label("\(person.email)", systemImage: "mail")
+                Label("\(person.email)", systemImage: "tray")
             }
         }
         .navigationTitle("\(person.fullName)")

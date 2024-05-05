@@ -11,17 +11,21 @@ struct ContentView: View {
     let person = Person.getPersons()
     
     var body: some View {
-        TabView {
-            PersonList(person: person)
-                .tabItem {
-                    Image(systemName: "person.circle")
-                    Text("Contacts")
-                }
-            Numbers(person: person)
-                .tabItem {
-                    Image(systemName: "phone")
-                    Text("Numbers")
-                }
+        NavigationStack {
+            TabView {
+                PersonListView(persons: person)
+                    .tabItem {
+                        Image(systemName: "person.2.circle")
+                        Text("Contacts")
+                    }
+                PersonSectionView(persons: person)
+                    .tabItem {
+                        Image(systemName: "phone")
+                        Text("Numbers")
+                    }
+            }
+            .navigationTitle("Contact List")
+            .preferredColorScheme(.dark)
         }
     }
 }
