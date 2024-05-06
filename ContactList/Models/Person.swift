@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Person: Identifiable {
     let id = UUID()
@@ -15,14 +14,13 @@ struct Person: Identifiable {
     let lastName: String
     let email: String
     let phone: String
-    let color: Color
     
     var fullName: String {
         "\(firstName) \(lastName)"
     }
     
     static func getPersons() -> [Person] {
-        let user = DataStore()
+        let user = DataStore.shared
         var persons: [Person] = []
         
         let shuffleNames = user.firstNames.shuffled()
@@ -35,12 +33,7 @@ struct Person: Identifiable {
                 firstName: shuffleNames[index],
                 lastName: shuffleLastNames[index],
                 email: shuffleEmails[index],
-                phone: shufflePhones[index],
-                color: Color(
-                    red: Double.random(in: 0...1),
-                    green: Double.random(in: 0...1),
-                    blue: Double.random(in: 0...1)
-                )
+                phone: shufflePhones[index]
             )
             persons.append(person)
         }

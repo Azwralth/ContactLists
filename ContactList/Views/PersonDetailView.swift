@@ -16,18 +16,16 @@ struct PersonDetailView: View {
                 Spacer()
                 Image(systemName: "person.fill")
                     .resizable()
-                .frame(width: 150, height: 150)
+                    .frame(width: 150, height: 150)
                 Spacer()
             }
-            VStack(alignment: .leading, spacing: 20) {
-                Label("\(person.phone)", systemImage: "phone")
-                Label("\(person.email)", systemImage: "tray")
-            }
+            Label(person.phone, systemImage: "phone")
+            Label(person.email, systemImage: "tray")
         }
-        .navigationTitle("\(person.fullName)")
+        .navigationTitle(person.fullName)
     }
 }
 
 #Preview {
-    PersonDetailView(person: Person(firstName: "Alex", lastName: "Alexov", email: "@mail.ru", phone: "123", color: .red))
+    PersonDetailView(person: Person.getPersons().first!)
 }

@@ -17,7 +17,6 @@ struct PersonSectionView: View {
                     Label(person.phone, systemImage: "phone")
                     Label(person.email, systemImage: "tray")
                 }
-                .textCase(.none)
             }
             .listStyle(.plain)
             .navigationTitle("Contact List")

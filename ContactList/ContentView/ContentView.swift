@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = ContentViewModel()
+    @StateObject private var contentVM = ContentViewModel()
     
     var body: some View {
         TabView {
-            PersonListView(persons: viewModel.filteredPersons)
+            PersonListView(persons: contentVM.filteredPersons)
                 .tabItem {
                     Image(systemName: "person.2.circle")
                     Text("Contacts")
                 }
-            PersonSectionView(persons: viewModel.filteredPersons)
+            PersonSectionView(persons: contentVM.filteredPersons)
                 .tabItem {
                     Image(systemName: "phone")
                     Text("Numbers")
                 }
         }
         .preferredColorScheme(.dark)
-        .searchable(text: $viewModel.searchName, prompt: "Search")
+        .searchable(text: $contentVM.searchName, prompt: "Search")
     }
 }
 

@@ -17,11 +17,11 @@ struct PersonListView: View {
                 NavigationLink(destination: PersonDetailView(person: person)) {
                     ZStack {
                         Circle()
-                            .fill(person.color)
+                            .fill(.orange)
                             .frame(width: 50, height: 50)
-                        Text("\(person.firstName.prefix(1))")
+                        Text(person.firstName.prefix(1))
                     }
-                    Text("\(person.fullName)")
+                    Text(person.fullName)
                 }
             }
             .listStyle(.plain)
