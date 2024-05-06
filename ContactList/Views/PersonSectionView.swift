@@ -11,7 +11,6 @@ struct PersonSectionView: View {
     let persons: [Person]
     
     var body: some View {
-        NavigationStack {
             List(persons) { person in
                 Section(person.fullName) {
                     Label(person.phone, systemImage: "phone")
@@ -19,8 +18,6 @@ struct PersonSectionView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("Contact List")
-        }
     }
 }
 

@@ -12,12 +12,11 @@ struct PersonListView: View {
     let persons: [Person]
     
     var body: some View {
-        NavigationStack {
             List(persons) { person in
                 NavigationLink(destination: PersonDetailView(person: person)) {
                     ZStack {
                         Circle()
-                            .fill(.orange)
+                            .fill(Color.random)
                             .frame(width: 50, height: 50)
                         Text(person.firstName.prefix(1))
                     }
@@ -25,8 +24,14 @@ struct PersonListView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("Contact List")
-        }
+    }
+}
+
+extension Color {
+    static var random: Color {
+        return Color(red: .random(in: 0...1),
+                     green: .random(in: 0...1),
+                     blue: .random(in: 0...1))
     }
 }
 
