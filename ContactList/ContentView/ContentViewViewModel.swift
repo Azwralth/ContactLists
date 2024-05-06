@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Observation
 
-final class ContentViewModel: ObservableObject {
-    @Published var searchName = ""
+@Observable final class ContentViewModel: ObservableObject {
+    var searchName = ""
     
     let persons = Person.getPersons()
     

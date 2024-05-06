@@ -57,5 +57,5 @@ final class DataStore {
         "000-000-0000"
     ]
     
-    private init(){}
+    private init() {}
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var contentVM = ContentViewModel()
+    @State private var contentVM = ContentViewModel()
     
     var body: some View {
         NavigationStack {
