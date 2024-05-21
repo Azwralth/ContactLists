@@ -17,6 +17,9 @@
 		76CA54F32BE777C200D1DF98 /* PersonSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F22BE777C200D1DF98 /* PersonSectionView.swift */; };
 		76CA54F52BE7781100D1DF98 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54F42BE7781100D1DF98 /* PersonListView.swift */; };
 		76CA54FF2BE844B600D1DF98 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA54FE2BE844B600D1DF98 /* ContentViewViewModel.swift */; };
+		76D7882A2BFCBA41003A9456 /* PersonListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D788292BFCBA41003A9456 /* PersonListViewViewModel.swift */; };
+		76D7882D2BFCBAFD003A9456 /* PersonDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7882C2BFCBAFD003A9456 /* PersonDetailViewViewModel.swift */; };
+		76D788302BFCBB20003A9456 /* PersonSectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7882F2BFCBB20003A9456 /* PersonSectionViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		76CA54F22BE777C200D1DF98 /* PersonSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSectionView.swift; sourceTree = "<group>"; };
 		76CA54F42BE7781100D1DF98 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
 		76CA54FE2BE844B600D1DF98 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		76D788292BFCBA41003A9456 /* PersonListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewViewModel.swift; sourceTree = "<group>"; };
+		76D7882C2BFCBAFD003A9456 /* PersonDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewViewModel.swift; sourceTree = "<group>"; };
+		76D7882F2BFCBB20003A9456 /* PersonSectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSectionViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				76CA55002BE8451D00D1DF98 /* ContentView */,
-				76CA54FD2BE7C47300D1DF98 /* Views */,
+				76D7882B2BFCBA49003A9456 /* PersonList */,
+				76D7882E2BFCBB08003A9456 /* PersonDetail */,
+				76CA54FD2BE7C47300D1DF98 /* PersonSectionView */,
 				76CA54FB2BE7C44C00D1DF98 /* Services */,
 				76CA54FA2BE7C43800D1DF98 /* Models */,
 				76CA54E42BE776B300D1DF98 /* Preview Content */,
@@ -98,14 +106,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		76CA54FD2BE7C47300D1DF98 /* Views */ = {
+		76CA54FD2BE7C47300D1DF98 /* PersonSectionView */ = {
 			isa = PBXGroup;
 			children = (
-				76CA54F42BE7781100D1DF98 /* PersonListView.swift */,
 				76CA54F22BE777C200D1DF98 /* PersonSectionView.swift */,
-				76CA54F02BE777A400D1DF98 /* PersonDetailView.swift */,
+				76D7882F2BFCBB20003A9456 /* PersonSectionViewViewModel.swift */,
 			);
-			path = Views;
+			path = PersonSectionView;
 			sourceTree = "<group>";
 		};
 		76CA55002BE8451D00D1DF98 /* ContentView */ = {
@@ -115,6 +122,24 @@
 				76CA54FE2BE844B600D1DF98 /* ContentViewViewModel.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		76D7882B2BFCBA49003A9456 /* PersonList */ = {
+			isa = PBXGroup;
+			children = (
+				76CA54F42BE7781100D1DF98 /* PersonListView.swift */,
+				76D788292BFCBA41003A9456 /* PersonListViewViewModel.swift */,
+			);
+			path = PersonList;
+			sourceTree = "<group>";
+		};
+		76D7882E2BFCBB08003A9456 /* PersonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				76CA54F02BE777A400D1DF98 /* PersonDetailView.swift */,
+				76D7882C2BFCBAFD003A9456 /* PersonDetailViewViewModel.swift */,
+			);
+			path = PersonDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,11 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CA54E12BE776B100D1DF98 /* ContentView.swift in Sources */,
+				76D788302BFCBB20003A9456 /* PersonSectionViewViewModel.swift in Sources */,
 				76CA54ED2BE776BE00D1DF98 /* DataStore.swift in Sources */,
 				76CA54F52BE7781100D1DF98 /* PersonListView.swift in Sources */,
+				76D7882D2BFCBAFD003A9456 /* PersonDetailViewViewModel.swift in Sources */,
 				76CA54F12BE777A400D1DF98 /* PersonDetailView.swift in Sources */,
 				76CA54EF2BE776EB00D1DF98 /* Person.swift in Sources */,
 				76CA54F32BE777C200D1DF98 /* PersonSectionView.swift in Sources */,
+				76D7882A2BFCBA41003A9456 /* PersonListViewViewModel.swift in Sources */,
 				76CA54DF2BE776B100D1DF98 /* ContactListApp.swift in Sources */,
 				76CA54FF2BE844B600D1DF98 /* ContentViewViewModel.swift in Sources */,
 			);

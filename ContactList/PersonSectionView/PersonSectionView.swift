@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct PersonSectionView: View {
-    let persons: [Person]
+    @ObservedObject var personSectionVM: PersonSectionViewViewModel
     
     var body: some View {
-            List(persons) { person in
+        List(personSectionVM.persons) { person in
                 Section(person.fullName) {
                     Label(person.phone, systemImage: "phone")
                     Label(person.email, systemImage: "tray")
@@ -22,5 +22,5 @@ struct PersonSectionView: View {
 }
 
 #Preview {
-    PersonSectionView(persons: Person.getPersons())
+    PersonSectionView(personSectionVM: PersonSectionViewViewModel(persons: Person.getPersons()))
 }

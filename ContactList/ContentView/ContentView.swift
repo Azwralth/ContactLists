@@ -13,12 +13,12 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                PersonListView(persons: contentVM.filteredPersons)
+                PersonListView(personListVM: PersonListViewViewModel(persons: contentVM.filteredPersons))
                     .tabItem {
                         Image(systemName: "person.2.circle")
                         Text("Contacts")
                     }
-                PersonSectionView(persons: contentVM.filteredPersons)
+                PersonSectionView(personSectionVM: PersonSectionViewViewModel(persons: contentVM.filteredPersons))
                     .tabItem {
                         Image(systemName: "phone")
                         Text("Numbers")

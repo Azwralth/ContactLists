@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonDetailView: View {
-    let person: Person
+    @ObservedObject var personDetailVM: PersonDetailViewViewModel
     
     var body: some View {
         List {
@@ -19,13 +19,13 @@ struct PersonDetailView: View {
                     .frame(width: 150, height: 150)
                 Spacer()
             }
-            Label(person.phone, systemImage: "phone")
-            Label(person.email, systemImage: "tray")
+            Label(personDetailVM.person.phone, systemImage: "phone")
+            Label(personDetailVM.person.email, systemImage: "tray")
         }
-        .navigationTitle(person.fullName)
+        .navigationTitle(personDetailVM.person.fullName)
     }
 }
 
 #Preview {
-    PersonDetailView(person: Person.getPersons().first!)
+    PersonDetailView(personDetailVM: PersonDetailViewViewModel(person: Person.getPersons().first!))
 }
